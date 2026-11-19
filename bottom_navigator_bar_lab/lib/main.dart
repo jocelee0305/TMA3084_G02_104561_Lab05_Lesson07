@@ -39,7 +39,10 @@ class _BottomNavLabState extends State<BottomNavLab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lab A'), backgroundColor: Colors.blue),
+      appBar: AppBar(
+        title: const Text('Bottom Navigation Bar'),
+        backgroundColor: Colors.blue,
+      ),
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

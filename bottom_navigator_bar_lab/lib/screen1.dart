@@ -7,7 +7,7 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'screen 1',
+        'Home',
         style: TextStyle(
           fontSize: 40,
           fontWeight: FontWeight.bold,
