@@ -14,10 +14,12 @@ void main() => runApp(
     );
 
 class TabModel extends ChangeNotifier {
-  int currentIndex = 0;
+  int _currentIndex = 0;
+
+  int get currentIndex => _currentIndex;
 
   void setCurrentIndex(int index) {
-    currentIndex = index;
+    _currentIndex = index;
     notifyListeners();
   }
 }
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
 class BottomNavLab extends StatelessWidget {
   const BottomNavLab({super.key});
 
-  final List<Widget> screens = const [
+  static const List<Widget> screens = [
     Screen1(),
     Screen2(),
     Screen3(),
@@ -46,7 +48,9 @@ class BottomNavLab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentIndex = context.watch<TabModel>().currentIndex;
+    final currentIndex = context.select<TabModel, int>(
+      (model) => model.currentIndex,
+    );
 
     return Scaffold(
       appBar: AppBar(
