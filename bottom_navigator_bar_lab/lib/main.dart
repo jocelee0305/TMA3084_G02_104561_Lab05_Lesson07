@@ -45,9 +45,7 @@ class BottomNavLab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentIndex = context.select<TabModel, int>(
-      (model) => model.currentIndex,
-    );
+    final currentIndex = context.watch<TabModel>().currentIndex;
 
     return Scaffold(
       appBar: AppBar(
