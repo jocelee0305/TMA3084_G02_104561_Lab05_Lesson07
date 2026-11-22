@@ -7,11 +7,8 @@ import 'screen3.dart';
 import 'screen4.dart';
 
 void main() => runApp(
-      ChangeNotifierProvider(
-        create: (_) => TabModel(),
-        child: const MyApp(),
-      ),
-    );
+  ChangeNotifierProvider(create: (_) => TabModel(), child: const MyApp()),
+);
 
 class TabModel extends ChangeNotifier {
   int _currentIndex = 0;

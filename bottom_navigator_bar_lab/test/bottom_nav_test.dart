@@ -5,10 +5,7 @@ import 'package:bottom_navigator_bar_lab/main.dart';
 void main() {
   testWidgets('tapping Alarm switches the screen', (tester) async {
     await tester.pumpWidget(
-      ChangeNotifierProvider(
-        create: (_) => TabModel(),
-        child: const MyApp(),
-      ),
+      ChangeNotifierProvider(create: (_) => TabModel(), child: const MyApp()),
     );
     expect(find.text('Home'), findsNWidgets(2));
 
