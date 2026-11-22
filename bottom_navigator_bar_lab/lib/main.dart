@@ -16,6 +16,8 @@ class TabModel extends ChangeNotifier {
   int get currentIndex => _currentIndex;
 
   void setCurrentIndex(int index) {
+    if (index == _currentIndex) return;
+
     _currentIndex = index;
     notifyListeners();
   }
